@@ -17,7 +17,7 @@ PRIMARY KEY (role_id),
 FOREIGN KEY (dept_id) REFERENCES department(dept_id)
 );
 
-CREATE TABLE employee (
+CREATE TABLE employees (
 emp_id INT NOT NULL AUTO_INCREMENT,
 first_name VARCHAR(30) NOT NULL,
 last_name VARCHAR(30) NOT NULL,
