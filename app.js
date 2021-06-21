@@ -7,14 +7,16 @@ const view = require("./lib/view");
 
 const connection = mysql.createConnection({
     host: "localhost",
-    port: 3030,
+    port: 3306,
     user: "root",
-    password: "password"
+    password: "Kenndall2017!",
     database: "employee_db"
 });
 
-// connection.connect(function(err) {
-//     if (err) throw err;
-//     console.log("connected as id" + connection.threadId + "\n");
-//     exports.start();
-// });
+connection.connect(function(err) {
+    if (err) throw err;
+    console.log("connected as id" + connection.threadId + "\n");
+    exports.start();
+});
+
+
