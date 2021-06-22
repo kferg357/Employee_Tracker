@@ -19,6 +19,37 @@ connection.connect(function(err) {
     exports.start();
 });
 
+exports.start = () => {
+    inquirer.prompt([
+        {
+            type:"list",
+            messages: "What would you like to do?",
+            name: "choice",
+            choices: [
+                "View all Employees",
+                "Add Employee",
+                "Update Employee Role",
+                "EXIT",
+
+            ]
+        }
+    ]).then(function(anwer){
+        if(anwer.choice === "View all Employees") {
+            view.viewAllEmployees();
+        }
+        else if(answer.choice === "Add Employee") {
+            add.addEmployee();
+        }
+        else if (anwer.choice ==="Update Employee Role") {
+            update.updateRole();
+        }
+        else if (answer.choice === "EXIT") {
+            connection.end();
+            return
+        }
+    });
+};
+
 
 
 
