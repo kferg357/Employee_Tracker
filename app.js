@@ -26,15 +26,15 @@ exports.start = () => {
             messages: "What would you like to do?",
             name: "choice",
             choices: [
-                "View all Employees",
+                "View All Employees",
                 "Add Employee",
                 "Update Employee Role",
                 "EXIT",
 
             ]
         }
-    ]).then(function(anwer){
-        if(anwer.choice === "View all Employees") {
+    ]).then(function(answer){
+        if(anwer.choice === "View All Employees") {
             view.viewAllEmployees();
         }
         else if(answer.choice === "Add Employee") {
