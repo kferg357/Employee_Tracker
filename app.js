@@ -34,13 +34,13 @@ exports.start = () => {
             ]
         }
     ]).then(function(answer){
-        if(anwer.choice === "View All Employees") {
+        if(answer.choice === "View All Employees") {
             view.viewAllEmployees();
         }
         else if(answer.choice === "Add Employee") {
             add.addEmployee();
         }
-        else if (anwer.choice ==="Update Employee Role") {
+        else if (answer.choice ==="Update Employee Role") {
             update.updateRole();
         }
         else if (answer.choice === "EXIT") {
