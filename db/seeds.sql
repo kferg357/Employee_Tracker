@@ -3,7 +3,7 @@ INSERT INTO  compamy_role (title, salary, dept_id) VALUES
 ('General Manager', 80000.00, 3),
 ('Head Chef', 60000.00, 1),
 ('Sous CHef', 30000.00, 1),
-('COok', 30000.00, 1),
+('Cook', 30000.00, 1),
 ('Dishwasher', 20000.00, 01),
 ('Front of House Manager', 40000.00, 2),
 ('Host', 30000.00, 2),
