@@ -3,27 +3,27 @@ CREATE DATABASE employee_db;
 
 USE employee_db;
 CREATE TABLE department (
-dept_id INT NOT NULL AUTO_INCREMENT,
-dept_name VARCHAR(30),
-PRIMARY KEY (dept_id)
+Dept_id INT NOT NULL AUTO_INCREMENT,
+Dept_name VARCHAR(30),
+PRIMARY KEY (Dept_id)
 );
 
 CREATE TABLE company_role (
-role_id INT NOT NULL AUTO_INCREMENT,
+Role_id INT NOT NULL AUTO_INCREMENT,
 title VARCHAR (30) NOT NULL,
 salary DEC(7,2) NOT NULL,
-dept_id INT,
-PRIMARY KEY (role_id),
-FOREIGN KEY (dept_id) REFERENCES department(dept_id)
+Dept_id INT,
+PRIMARY KEY (Role_id),
+FOREIGN KEY (Dept_id) REFERENCES department(Dept_id)
 );
 
 CREATE TABLE employees (
-emp_id INT NOT NULL AUTO_INCREMENT,
+Emp_id INT NOT NULL AUTO_INCREMENT,
 first_name VARCHAR(30) NOT NULL,
 last_name VARCHAR(30) NOT NULL,
-emp_role_id INT NOT NULL,
-manager_id INT,
-PRIMARY KEY (emp_id),
-FOREIGN KEY (emp_role_id) REFERENCES company_role(role_id),
-FOREIGN KEY (manager_id) REFERENCES employee(emp_id)
+Emp_Role_id INT NOT NULL,
+Manager_id INT,
+PRIMARY KEY (Emp_id),
+FOREIGN KEY (Emp_Role_id) REFERENCES company_role(Role_id),
+FOREIGN KEY (Manager_id) REFERENCES employees(Emp_id)
 );
